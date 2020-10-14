@@ -1,0 +1,2 @@
+(this.webpackJsonpccm_challenge=this.webpackJsonpccm_challenge||[]).push([[0],{3:function(e,n,t){e.exports=t(8)},8:function(e,n,t){"use strict";t.r(n);var c=t(0),a=t.n(c),l=t(2);var r=function(){return a.a.createElement("div",{className:"App"},"Hello")};t.n(l).a.render(a.a.createElement(a.a.StrictMode,null,a.a.createElement(r,null)),document.getElementById("root"))}},[[3,1,2]]]);
+//# sourceMappingURL=main.9f703940.chunk.js.map
