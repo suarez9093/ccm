@@ -43,6 +43,12 @@
   color: #0066cc;
   margin-left: 0.25em;
 }
+.checked {
+  color: #ffe023;
+}
+.product-price {
+  margin: 1em 0;
+}
 .product-heading::after {
   content: "";
   width: 100px;

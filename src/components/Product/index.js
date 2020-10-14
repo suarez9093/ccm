@@ -48,16 +48,37 @@ function Product() {
                     Prime Potence
                   </a>
                 </p>
+                {/*  */}
+                <div className="product-rating-container">
+                  <div className="product-stars">
+                    <span className="fa fa-star checked"></span>
+                    <span className="fa fa-star checked"></span>
+                    <span className="fa fa-star checked"></span>
+                    <span className="fa fa-star checked"></span>
+                    <span className="fa fa-star"></span>
+                  </div>
+                  <span className="product-reviews"> (435 reviews)</span>
+                </div>
+                {/*  */}
               </div>
-              <p className="product-price">
+              <h2 className="product-price">
                 {product.shipping_and_handling.currency}
                 {product.shipping_and_handling.price}
-              </p>
+              </h2>
               <ul className="product-benefits">
-                <li className="product-benefit">Big man</li>
-                <li className="product-benefit">Strong man</li>
-                <li className="product-benefit">Good man</li>
-                <li className="product-benefit">Alpha man</li>
+                <li className="product-benefit">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
+                </li>
+                <li className="product-benefit">
+                  Nullam et orci leo. Orci varius natoque penatibus et magnis
+                  dis parturient montes, nascetur ridiculus mus
+                </li>
+                <li className="product-benefit">
+                  Duis in nulla sit amet elit dapibus scelerisque.
+                </li>
+                <li className="product-benefit">
+                  In ultricies elementum luctus.
+                </li>
               </ul>
             </div>
             <div className="product-btn-container">

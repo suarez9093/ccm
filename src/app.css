@@ -16,7 +16,8 @@ p {
   margin: 0;
 }
 p,
-ul {
+ul,
+.product-reviews {
   color: #666666;
 }
 a {
