@@ -8,7 +8,7 @@ function ContextProvider({ children }) {
     getProduct();
   }, []);
   async function getProduct() {
-    const url = `http://track.clickbooth.com/i?lid=11851&ua=${navigator.userAgent}&ip=${process.env.REACT_APP_IP}&subid1=&subid2=&subid3=&subid4=&subid5=`;
+    const url = `https://track.clickbooth.com/i?lid=11851&ua=${navigator.userAgent}&ip=${process.env.REACT_APP_IP}&subid1=&subid2=&subid3=&subid4=&subid5=`;
     const res = await fetch(url);
     const data = await res.json();
     setProduct(data.data);
