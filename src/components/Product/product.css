@@ -68,7 +68,13 @@
   border: 1px solid grey;
 }
 .product-btn-container {
+  margin-top: 2em;
+
   display: flex;
+  justify-content: center;
+}
+.product-quantity-container {
+  margin-right: 2em;
 }
 .btn {
   background: #ffe023;
