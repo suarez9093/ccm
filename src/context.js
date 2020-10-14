@@ -14,9 +14,22 @@ function ContextProvider({ children }) {
     setProduct(data.data);
   }
 
+  function handleClick(e) {
+    if (e.target.textContent === "+") {
+      setQuantity((state) => {
+        state = state + 1;
+      });
+    } else if (e.target.textContent === "-") {
+      setQuantity((state) => {
+        state = state - 1;
+      });
+    }
+    console.log(quantity);
+  }
   return (
     <context.Provider
       value={{
+        handleClick,
         product,
         setProduct,
         quantity,

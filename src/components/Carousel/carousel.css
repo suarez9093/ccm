@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 600px;
+  width: 100%;
+}
+
+#carousel {
+  max-width: 600px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.carousel-item {
+  display: none;
+}
+
+.carousel-actions {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+}
+#carousel-btn-next,
+#carousel-btn-prev {
+  cursor: pointer;
+  font-size: 1.5em;
+  color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 0.25em;
+  border-radius: 50%;
+  margin: 0 1em;
+}
+
+.carousel-item-hidden {
+  display: none;
+}
+
+.carousel-item-visible {
+  display: block;
+  animation: fadeVisibility 0.75s;
+}
+
+@keyframes fadeVisibility {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
