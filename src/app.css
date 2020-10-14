@@ -3,6 +3,7 @@ body {
   margin: 0;
   font-size: 1rem;
   line-height: 1.6;
+  font-family: "Work Sans", sans-serif;
 }
 
 h1,
@@ -13,4 +14,19 @@ h5,
 h6,
 p {
   margin: 0;
+}
+p,
+ul,
+.product-reviews {
+  color: #666666;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  margin: 0;
+  padding-left: 0.5em;
+}
+img {
+  width: 100%;
 }

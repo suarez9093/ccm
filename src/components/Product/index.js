@@ -1,22 +1,21 @@
 import React, { useState, useEffect, useContext } from "react";
+import Carousel from "../Carousel";
 import { context } from "../../context";
 import "./product.css";
 
 function Product() {
-  const { product, quantity } = useContext(context);
-  //   const [product, setProduct] = useState();
-  //   const [quantity, setQuantity] = useState(1);
-  //   useEffect(() => {
-  //     getProduct();
-  //   }, []);
+  const [quantity, setQuantity] = useState(1);
+  const { product } = useContext(context);
 
-  //   async function getProduct() {
-  //     const url = `http://track.clickbooth.com/i?lid=11851&ua=${navigator.userAgent}&ip=${process.env.REACT_APP_IP}&subid1=&subid2=&subid3=&subid4=&subid5=`;
-  //     const res = await fetch(url);
-  //     const data = await res.json();
-  //     setProduct(data.data);
-  //   }
-  console.log(product);
+  function handleClick(e) {
+    console.dir(e.target);
+    if (e.target.className === "fas fa-plus") {
+      setQuantity(quantity + 1);
+    } else if (e.target.className === "fas fa-minus" && quantity !== 0) {
+      setQuantity(quantity - 1);
+    }
+  }
+
   return (
     <>
       {!product && (
@@ -36,39 +35,58 @@ function Product() {
               src={product.image_url}
               alt={product.name}
             />
-            <img
-              className="product-img"
-              src="https://images-na.ssl-images-amazon.com/images/I/81dNaXXxN%2BL._AC_SL1500_.jpg"
-              alt={product.name}
-            />
+
             <div className="product-text-container">
-              <h1 className="product-title">{product.name}</h1>
-              <p className="product-brand">
-                Brand:
-                <a
-                  className="product-brand-link"
-                  href="https://primepotence.wixsite.com/primepotence"
-                >
-                  Prime Potence
-                </a>
-              </p>
-              <p className="product-price">
+              <div className="product-heading">
+                <h1 className="product-title">{product.name}</h1>
+                <p className="product-brand">
+                  Brand:
+                  <a
+                    className="product-brand-link"
+                    href="https://primepotence.wixsite.com/primepotence"
+                  >
+                    Prime Potence
+                  </a>
+                </p>
+                {/*  */}
+                <div className="product-rating-container">
+                  <div className="product-stars">
+                    <span className="fa fa-star checked"></span>
+                    <span className="fa fa-star checked"></span>
+                    <span className="fa fa-star checked"></span>
+                    <span className="fa fa-star checked"></span>
+                    <span className="fa fa-star"></span>
+                  </div>
+                  <span className="product-reviews"> (435 reviews)</span>
+                </div>
+                {/*  */}
+              </div>
+              <h2 className="product-price">
                 {product.shipping_and_handling.currency}
                 {product.shipping_and_handling.price}
-              </p>
+              </h2>
               <ul className="product-benefits">
-                <li className="product-benefit">Big man</li>
-                <li className="product-benefit">Strong man</li>
-                <li className="product-benefit">Good man</li>
-                <li className="product-benefit">Alpha man</li>
+                <li className="product-benefit">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
+                </li>
+                <li className="product-benefit">
+                  Nullam et orci leo. Orci varius natoque penatibus et magnis
+                  dis parturient montes, nascetur ridiculus mus
+                </li>
+                <li className="product-benefit">
+                  Duis in nulla sit amet elit dapibus scelerisque.
+                </li>
+                <li className="product-benefit">
+                  In ultricies elementum luctus.
+                </li>
               </ul>
             </div>
             <div className="product-btn-container">
-              <input
-                className="product-quantity"
-                type="text"
-                placeholder={quantity}
-              />
+              <div className="product-quantity-container">
+                <i onClick={handleClick} className="fas fa-minus"></i>
+                <p className="product-quantity">{quantity}</p>
+                <i onClick={handleClick} className="fas fa-plus"></i>
+              </div>
               <a className="btn" href={product.click_url}>
                 Buy now
               </a>
