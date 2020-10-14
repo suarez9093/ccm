@@ -1,18 +1,8 @@
 import React from "react";
-import { Container, Row, Col } from "reactstrap";
 import Product from "./components/Product";
-
+import "./app.css";
 function App() {
-  return (
-    <Container>
-      <Row>
-        <Col>Header</Col>
-      </Row>
-      <Row>
-        <Product />
-      </Row>
-    </Container>
-  );
+  return <Product />;
 }
 
 export default App;
