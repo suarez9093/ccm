@@ -56,6 +56,7 @@ function Product() {
                 {product.shipping_and_handling.currency}
                 {product.shipping_and_handling.price}
               </h2>
+              <h3 className="product-about-title">About the Item</h3>
               <ul className="product-benefits">
                 <li className="product-benefit">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
@@ -71,16 +72,11 @@ function Product() {
                   In ultricies elementum luctus.
                 </li>
               </ul>
-            </div>
-            <div className="product-btn-container">
-              <div className="product-quantity-container">
-                <i onClick={handleClick} className="fas fa-minus"></i>
-                <p className="product-quantity">{quantity}</p>
-                <i onClick={handleClick} className="fas fa-plus"></i>
+              <div className="product-btn-container">
+                <a className="btn" href={product.click_url}>
+                  Buy now
+                </a>
               </div>
-              <a className="btn" href={product.click_url}>
-                Buy now
-              </a>
             </div>
           </div>
         </>

@@ -9,10 +9,9 @@
 }
 
 .product-text-container {
-  padding: 1em;
+  padding: 3em;
 }
 .product-heading {
-  /* border: 1px solid red; */
   text-align: center;
 }
 .product-brand-link {
@@ -24,6 +23,10 @@
 }
 .product-price {
   margin: 1em 0;
+}
+.product-benefits {
+  margin-bottom: 3em;
+  max-width: 600px;
 }
 .product-heading::after {
   content: "";
@@ -45,9 +48,8 @@
 }
 .product-btn-container {
   margin-top: 2em;
-
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
 .product-quantity-container {
   margin-right: 2em;
@@ -57,4 +59,12 @@
   color: black;
   padding: 0.35em 1.35em;
   border-radius: 3px;
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (min-width: 992px) {
+  .product-container {
+    flex-direction: row;
+  }
 }
