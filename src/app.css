@@ -3,7 +3,7 @@ body {
   margin: 0;
   font-size: 1rem;
   line-height: 1.6;
-  font-family: "Work Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 h1,
@@ -14,6 +14,9 @@ h5,
 h6,
 p {
   margin: 0;
+}
+h1 {
+  font-weight: 700;
 }
 p,
 ul,

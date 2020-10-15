@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { context } from "../../context";
+import "./loader.css";
 
 export default function Loader() {
   const { product } = useContext(context);
@@ -7,10 +8,10 @@ export default function Loader() {
     <>
       {!product && (
         <>
-          <div className="product-loading-container">
-            <h1 className="product-loading-title">Loading...</h1>
+          <div className="loading-container">
+            <h1 className="loading-title">Loading...</h1>
             <div className="lds-dual-ring"></div>
-            <p className="product-loading-description">Product is loading</p>
+            <p className="loading-description">Product is loading</p>
           </div>
         </>
       )}

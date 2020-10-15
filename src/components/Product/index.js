@@ -40,7 +40,7 @@ function Product() {
                     Prime Potence
                   </a>
                 </p>
-                {/*  */}
+
                 <div className="product-rating-container">
                   <div className="product-stars">
                     <span className="fa fa-star checked"></span>
@@ -51,7 +51,6 @@ function Product() {
                   </div>
                   <span className="product-reviews"> (435 reviews)</span>
                 </div>
-                {/*  */}
               </div>
               <h2 className="product-price">
                 {product.shipping_and_handling.currency}
