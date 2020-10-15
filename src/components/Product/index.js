@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useContext } from "react";
-import Carousel from "../Carousel";
+import React, { useState, useContext } from "react";
+import Loader from "../Loader";
 import { context } from "../../context";
 import "./product.css";
 
@@ -18,15 +18,7 @@ function Product() {
 
   return (
     <>
-      {!product && (
-        <>
-          <div className="product-loading-container">
-            <h1 className="product-loading-title">Loading...</h1>
-            <div className="lds-dual-ring"></div>
-            <p className="product-loading-description">Product is loading</p>
-          </div>
-        </>
-      )}
+      <Loader />
       {product && (
         <>
           <div className="product-container">
