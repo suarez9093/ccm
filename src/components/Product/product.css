@@ -61,6 +61,11 @@
   border-radius: 3px;
   display: flex;
   align-items: center;
+  border: solid #ffe023;
+}
+.btn:hover,
+.btn:focus {
+  background: white;
 }
 
 @media screen and (min-width: 992px) {
